@@ -278,9 +278,21 @@ track.Genre.ToString(), track.Year.ToString() }));
 
         // ---------- Резервное копирование ----------
 
+        // Переменная окружения, в которой можно указать другую папку резервных копий
+        // (используется автоматизированными UI-тестами, чтобы не трогать реальные копии)
+        public const string BackupFolderVariable = "MUSICCOLLECTION_BACKUP_DIR";
+
         // Папка резервных копий по умолчанию — Backups рядом с программой
-        public static string DefaultBackupFolder =>
-            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backups");
+        public static string DefaultBackupFolder
+        {
+            get
+            {
+                string custom = Environment.GetEnvironmentVariable(BackupFolderVariable);
+                return string.IsNullOrWhiteSpace(custom)
+                    ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backups")
+                    : custom;
+            }
+        }
 
         // Создаёт резервную копию коллекции (JSON) с датой и временем в имени файла.
         // Возвращает полный путь к созданному файлу.

@@ -15,6 +15,7 @@ namespace LR__1
         public string Year { get; set; } // Из int в string
         public AddTrackForm()
         {
+            this.Name = "AddTrackForm";
             this.Text = "Добавить трек";
             this.Width = 300;
             this.Height = 200;
@@ -44,27 +45,32 @@ namespace LR__1
             };
             var artistTextBox = new TextBox
             {
+                Name = "artistTextBox",
                 Location = new System.Drawing.Point(120, 10),
                 Width = 150
             };
             var titleTextBox = new TextBox
             {
+                Name = "titleTextBox",
                 Location = new System.Drawing.Point(120, 40),
                 Width
             = 150
             };
             var genreTextBox = new TextBox
             {
+                Name = "genreTextBox",
                 Location = new System.Drawing.Point(120, 70),
                 Width = 150
             };
             var yearTextBox = new TextBox
             {
+                Name = "yearTextBox",
                 Location = new System.Drawing.Point(120, 100),
                 Width = 50
             };
             var okButton = new Button
             {
+                Name = "okButton",
                 Text = "OK",
                 Location = new System.Drawing.Point(10,
             140),
@@ -72,6 +78,7 @@ namespace LR__1
             };
             var cancelButton = new Button
             {
+                Name = "cancelButton",
                 Text = "Отмена",
                 Location = new
             System.Drawing.Point(95, 140),

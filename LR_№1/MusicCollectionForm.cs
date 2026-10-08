@@ -22,6 +22,7 @@ namespace LR__1
         private Button restoreButton;
         public MusicCollectionForm()
         {
+            this.Name = "MusicCollectionForm";
             this.Text = "Управление музыкальной коллекцией";
             this.Width = 600;
             this.Height = 440;
@@ -32,6 +33,7 @@ namespace LR__1
         {
             listView = new ListView
             {
+                Name = "listView",
                 Location = new System.Drawing.Point(10, 10),
                 Size = new System.Drawing.Size(480, 300),
                 View = View.Details,
@@ -43,6 +45,7 @@ namespace LR__1
             listView.Columns.Add("Год", 50);
             addTrackButton = new Button
             {
+                Name = "addTrackButton",
                 Location = new System.Drawing.Point(10, 320),
                 Text = "Добавить трек",
                 Size = new System.Drawing.Size(100, 25)
@@ -70,6 +73,7 @@ namespace LR__1
             };
             removeTrackButton = new Button
             {
+                Name = "removeTrackButton",
                 Location = new System.Drawing.Point(120, 320),
                 Text = "Удалить трек",
                 Size = new System.Drawing.Size(100, 25)
@@ -90,6 +94,7 @@ namespace LR__1
             };
             searchByArtistButton = new Button
             {
+                Name = "searchByArtistButton",
                 Location = new System.Drawing.Point(230, 320),
                 Text = "Поиск по исполнителю",
                 Size = new System.Drawing.Size(200, 25)
@@ -105,6 +110,7 @@ namespace LR__1
             };
             sortByYearButton = new Button
             {
+                Name = "sortByYearButton",
                 Location = new System.Drawing.Point(440, 320),
                 Text = "Сортировать по году",
                 Size = new System.Drawing.Size(120, 25)
