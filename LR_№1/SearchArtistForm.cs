@@ -12,6 +12,7 @@ namespace LR__1
         public string Artist { get; set; }
         public SearchArtistForm()
         {
+            this.Name = "SearchArtistForm";
             this.Text = "Поиск по исполнителю";
             this.Width = 300;
             this.Height = 150;
@@ -23,12 +24,14 @@ namespace LR__1
             };
             var artistTextBox = new TextBox
             {
+                Name = "searchArtistTextBox",
                 Location = new System.Drawing.Point(10, 35),
                 Width
             = 260
             };
             var okButton = new Button
             {
+                Name = "okButton",
                 Text = "OK",
                 Location = new System.Drawing.Point(10,
             60),
@@ -36,6 +39,7 @@ namespace LR__1
             };
             var cancelButton = new Button
             {
+                Name = "cancelButton",
                 Text = "Отмена",
                 Location = new
             System.Drawing.Point(95, 60),
